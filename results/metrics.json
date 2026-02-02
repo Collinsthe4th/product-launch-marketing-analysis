@@ -1,0 +1,397 @@
+{
+  "data_quality": {
+    "rows": 2133,
+    "duplicate_event_ids": 0,
+    "missing_city": 47,
+    "missing_end_date": 36,
+    "end_date_matches_lease_pct": 100.0,
+    "sell_through_out_of_range": 0
+  },
+  "date_range": [
+    "2024-02-18",
+    "2025-08-06"
+  ],
+  "brands": 24,
+  "totals": {
+    "units_sold": 4132484,
+    "revenue_usd": 398735363.58,
+    "mean_sell_through_pct": 73.23
+  },
+  "sell_through_tests": {
+    "event_type": {
+      "group": "event_type",
+      "kruskal_h": 34.783377336106405,
+      "p_value": 5.146443237834956e-07,
+      "epsilon_squared": 0.014465872808320679,
+      "summary": [
+        {
+          "event_type": "Mobile Pop-Up Truck",
+          "events": 408,
+          "mean": 75.89,
+          "median": 75.97
+        },
+        {
+          "event_type": "Flash Event",
+          "events": 422,
+          "mean": 75.31,
+          "median": 74.39
+        },
+        {
+          "event_type": "Standalone Pop-Up",
+          "events": 425,
+          "mean": 72.78,
+          "median": 72.17
+        },
+        {
+          "event_type": "Mall Kiosk",
+          "events": 438,
+          "mean": 71.24,
+          "median": 72.22
+        },
+        {
+          "event_type": "Shop-in-Shop",
+          "events": 440,
+          "mean": 71.21,
+          "median": 71.03
+        }
+      ],
+      "significant_pairs": [
+        {
+          "a": "Flash Event",
+          "b": "Mall Kiosk",
+          "p_holm": 0.0014
+        },
+        {
+          "a": "Flash Event",
+          "b": "Shop-in-Shop",
+          "p_holm": 0.0008
+        },
+        {
+          "a": "Mall Kiosk",
+          "b": "Mobile Pop-Up Truck",
+          "p_holm": 0.0001
+        },
+        {
+          "a": "Mobile Pop-Up Truck",
+          "b": "Shop-in-Shop",
+          "p_holm": 0.0
+        },
+        {
+          "a": "Mobile Pop-Up Truck",
+          "b": "Standalone Pop-Up",
+          "p_holm": 0.0214
+        }
+      ]
+    },
+    "location_type": {
+      "group": "location_type",
+      "kruskal_h": 5.68137084253238,
+      "p_value": 0.2242408513628818,
+      "epsilon_squared": 0.0007901178771298779,
+      "summary": [
+        {
+          "location_type": "High-Street",
+          "events": 471,
+          "mean": 74.08,
+          "median": 74.44
+        },
+        {
+          "location_type": "Airport Duty-Free",
+          "events": 434,
+          "mean": 73.82,
+          "median": 73.88
+        },
+        {
+          "location_type": "Department Store Atrium",
+          "events": 422,
+          "mean": 73.09,
+          "median": 72.98
+        },
+        {
+          "location_type": "Art/Design District",
+          "events": 376,
+          "mean": 73.07,
+          "median": 72.44
+        },
+        {
+          "location_type": "Luxury Mall",
+          "events": 430,
+          "mean": 72.0,
+          "median": 71.3
+        }
+      ],
+      "significant_pairs": []
+    },
+    "region": {
+      "group": "region",
+      "kruskal_h": 2.762044938384251,
+      "p_value": 0.5984020270606332,
+      "epsilon_squared": 0.0,
+      "summary": [
+        {
+          "region": "Middle East",
+          "events": 418,
+          "mean": 73.91,
+          "median": 74.28
+        },
+        {
+          "region": "Asia-Pacific",
+          "events": 429,
+          "mean": 73.6,
+          "median": 73.66
+        },
+        {
+          "region": "North America",
+          "events": 399,
+          "mean": 73.48,
+          "median": 73.48
+        },
+        {
+          "region": "Latin America",
+          "events": 459,
+          "mean": 72.65,
+          "median": 72.6
+        },
+        {
+          "region": "Europe",
+          "events": 428,
+          "mean": 72.59,
+          "median": 72.2
+        }
+      ],
+      "significant_pairs": []
+    },
+    "category": {
+      "group": "category",
+      "kruskal_h": 4.950322967494657,
+      "p_value": 0.8386170419057601,
+      "epsilon_squared": 0.0,
+      "summary": [
+        {
+          "category": "Mascara",
+          "events": 215,
+          "mean": 74.34,
+          "median": 75.63
+        },
+        {
+          "category": "Fragrance",
+          "events": 225,
+          "mean": 74.03,
+          "median": 73.55
+        },
+        {
+          "category": "Blush",
+          "events": 223,
+          "mean": 73.56,
+          "median": 72.5
+        },
+        {
+          "category": "Foundation",
+          "events": 219,
+          "mean": 73.53,
+          "median": 72.83
+        },
+        {
+          "category": "Serum",
+          "events": 202,
+          "mean": 73.34,
+          "median": 73.03
+        },
+        {
+          "category": "Highlighter",
+          "events": 235,
+          "mean": 73.31,
+          "median": 74.63
+        },
+        {
+          "category": "Eyeshadow Palette",
+          "events": 210,
+          "mean": 73.2,
+          "median": 73.93
+        },
+        {
+          "category": "Primer",
+          "events": 209,
+          "mean": 72.67,
+          "median": 72.14
+        },
+        {
+          "category": "Lipstick",
+          "events": 191,
+          "mean": 72.55,
+          "median": 71.49
+        },
+        {
+          "category": "Setting Powder",
+          "events": 204,
+          "mean": 71.58,
+          "median": 72.09
+        }
+      ],
+      "significant_pairs": []
+    },
+    "price_band": {
+      "group": "price_band",
+      "kruskal_h": 7.084820953340915,
+      "p_value": 0.06924282140140467,
+      "epsilon_squared": 0.0019186570941009465,
+      "summary": [
+        {
+          "price_band": "Mid",
+          "events": 533,
+          "mean": 74.54,
+          "median": 74.6
+        },
+        {
+          "price_band": "Prestige",
+          "events": 533,
+          "mean": 73.3,
+          "median": 73.09
+        },
+        {
+          "price_band": "Upper",
+          "events": 533,
+          "mean": 72.96,
+          "median": 73.17
+        },
+        {
+          "price_band": "Entry",
+          "events": 534,
+          "mean": 72.13,
+          "median": 71.67
+        }
+      ],
+      "significant_pairs": []
+    }
+  },
+  "revenue_per_day_by_event_type": {
+    "group": "event_type",
+    "kruskal_h": 3.4041580909533877,
+    "p_value": 0.4926001188947582,
+    "epsilon_squared": 0.0,
+    "summary": [
+      {
+        "event_type": "Flash Event",
+        "events": 422,
+        "mean": 7367.1,
+        "median": 3274.65
+      },
+      {
+        "event_type": "Standalone Pop-Up",
+        "events": 425,
+        "mean": 7264.69,
+        "median": 2991.83
+      },
+      {
+        "event_type": "Mall Kiosk",
+        "events": 438,
+        "mean": 7050.18,
+        "median": 3141.92
+      },
+      {
+        "event_type": "Mobile Pop-Up Truck",
+        "events": 408,
+        "mean": 6782.24,
+        "median": 3414.33
+      },
+      {
+        "event_type": "Shop-in-Shop",
+        "events": 440,
+        "mean": 6779.49,
+        "median": 2871.0
+      }
+    ],
+    "significant_pairs": []
+  },
+  "spearman_correlations": {
+    "lease_length_days": {
+      "lease_length_days": 1.0,
+      "price_usd": 0.007,
+      "avg_daily_footfall": 0.024,
+      "units_sold": 0.023,
+      "sell_through_pct": -0.018
+    },
+    "price_usd": {
+      "lease_length_days": 0.007,
+      "price_usd": 1.0,
+      "avg_daily_footfall": -0.002,
+      "units_sold": 0.014,
+      "sell_through_pct": 0.019
+    },
+    "avg_daily_footfall": {
+      "lease_length_days": 0.024,
+      "price_usd": -0.002,
+      "avg_daily_footfall": 1.0,
+      "units_sold": -0.006,
+      "sell_through_pct": 0.06
+    },
+    "units_sold": {
+      "lease_length_days": 0.023,
+      "price_usd": 0.014,
+      "avg_daily_footfall": -0.006,
+      "units_sold": 1.0,
+      "sell_through_pct": 0.331
+    },
+    "sell_through_pct": {
+      "lease_length_days": -0.018,
+      "price_usd": 0.019,
+      "avg_daily_footfall": 0.06,
+      "units_sold": 0.331,
+      "sell_through_pct": 1.0
+    }
+  },
+  "prelaunch_models_cv": {
+    "sell_through_pct": {
+      "Mean (baseline)": {
+        "r2_mean": -0.0039,
+        "r2_std": 0.0044,
+        "mae": 12.335
+      },
+      "Ridge regression": {
+        "r2_mean": 0.0047,
+        "r2_std": 0.0109,
+        "mae": 12.307
+      },
+      "Gradient boosting": {
+        "r2_mean": -0.0407,
+        "r2_std": 0.031,
+        "mae": 12.485
+      }
+    },
+    "units_sold": {
+      "Mean (baseline)": {
+        "r2_mean": -0.0024,
+        "r2_std": 0.0018,
+        "mae": 919.182
+      },
+      "Ridge regression": {
+        "r2_mean": -0.0026,
+        "r2_std": 0.0026,
+        "mae": 919.142
+      },
+      "Gradient boosting": {
+        "r2_mean": -0.0492,
+        "r2_std": 0.0071,
+        "mae": 931.929
+      }
+    },
+    "revenue_usd": {
+      "Mean (baseline)": {
+        "r2_mean": -0.0011,
+        "r2_std": 0.0011,
+        "mae": 128244.417
+      },
+      "Ridge regression": {
+        "r2_mean": 0.5138,
+        "r2_std": 0.0498,
+        "mae": 89883.028
+      },
+      "Gradient boosting": {
+        "r2_mean": 0.4618,
+        "r2_std": 0.04,
+        "mae": 93142.995
+      }
+    }
+  },
+  "best_vs_worst_event_type_gap_points": 4.69
+}
