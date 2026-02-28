@@ -19,7 +19,10 @@ sys.path.insert(0, str(ROOT / "src"))
 from popup_analysis.analysis import compare_groups  # noqa: E402
 from popup_analysis.data import load  # noqa: E402
 
-st.set_page_config(page_title="Pop-Up Launch Analysis", page_icon="💄", layout="wide")
+st.set_page_config(page_title="Luxury Cosmetics Pop-Up Launch Analysis", layout="wide")
+
+HEADER = "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=1600&h=340&q=80"
+st.image(HEADER, use_container_width=True)
 
 
 @st.cache_data
@@ -31,8 +34,8 @@ def get_data() -> tuple[pd.DataFrame, dict, dict]:
 
 df, quality, metrics = get_data()
 
-st.title("💄 Luxury Cosmetics Pop-Ups: What Drives a Good Launch?")
-st.caption("2,133 pop-up events for 24 beauty brands, February 2024 to August 2025.")
+st.title("Luxury Cosmetics Pop-Up Launch Analysis")
+st.caption("I analysed 2,133 pop-up launch events for 24 beauty brands between February 2024 and August 2025. Use the filters in the sidebar, and the tests below rerun on the events you select.")
 
 st.sidebar.header("Filter events")
 regions = st.sidebar.multiselect("Region", sorted(df["region"].unique()), default=sorted(df["region"].unique()))
@@ -73,12 +76,12 @@ with right:
     else:
         st.info("Not enough events or groups in the current filter to test.")
 
-st.subheader("Do busier locations sell more?")
+st.subheader("Footfall against units sold")
 st.scatter_chart(f, x="avg_daily_footfall", y="units_sold", size=8)
 rho = f[["avg_daily_footfall", "units_sold"]].corr(method="spearman").iloc[0, 1]
 st.caption(f"Spearman correlation for the selected events: {rho:.3f}. Footfall and units sold are almost unrelated in this data.")
 
-st.subheader("Can a launch be predicted before it opens?")
+st.subheader("Predicting a launch before it opens")
 rows = []
 for target, models in metrics["prelaunch_models_cv"].items():
     for name, s in models.items():
@@ -87,4 +90,4 @@ table = pd.DataFrame(rows).pivot(index="Target", columns="Model", values="Cross-
 st.dataframe(table, use_container_width=True)
 st.caption("Sell-through and units cannot be predicted from pre-launch information (R² close to 0). Revenue only looks predictable because revenue = price × units and price is an input.")
 
-st.markdown("[Source code and README](https://github.com/Collinsthe4th/product-launch-marketing-analysis)")
+st.markdown("[Source code and README](https://github.com/Collinsthe4th/product-launch-marketing-analysis) · Header photo from Unsplash.")

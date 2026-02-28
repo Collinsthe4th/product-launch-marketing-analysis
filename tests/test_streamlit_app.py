@@ -13,7 +13,8 @@ APP = str(Path(__file__).resolve().parents[1] / "streamlit_app.py")
 def test_app_runs():
     at = AppTest.from_file(APP, default_timeout=120).run()
     assert not at.exception
-    assert at.title[0].value.startswith("💄 Luxury")
+    assert at.title[0].value == "Luxury Cosmetics Pop-Up Launch Analysis"
+    assert at.image  # header photo is shown
     for option in ["location_type", "region", "category", "price_band"]:
         at.selectbox[0].set_value(option).run()
         assert not at.exception
